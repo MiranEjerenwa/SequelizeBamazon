@@ -1,0 +1,2 @@
+# SequelizeBamazon
+Amazon App Sequelized
