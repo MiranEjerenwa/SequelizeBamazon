@@ -1,0 +1,24 @@
+{
+  "name": "SequelizeBamazon",
+  "version": "1.0.0",
+  "description": "Amazon App Sequelized",
+  "main": "customer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiranEjerenwa/SequelizeBamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiranEjerenwa/SequelizeBamazon/issues"
+  },
+  "homepage": "https://github.com/MiranEjerenwa/SequelizeBamazon#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}
