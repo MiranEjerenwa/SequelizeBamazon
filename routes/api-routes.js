@@ -8,7 +8,7 @@ const db = require('../models');
 module.exports = function(app) {
 
   // GET route for getting all of the products
-  app.get('/api/product', function(req, res) {
+  app.get('/api/products', function(req, res) {
     db.product.findAll({}).then(function(dbproduct) {
       res.json(dbproduct);
     }).catch(function(error) {
@@ -17,7 +17,7 @@ module.exports = function(app) {
   });
 
   // Get route for retrieving a single product
-  app.get('/api/product/:id', function(req, res) {
+  app.get('/api/products/:id', function(req, res) {
     db.product.findOne({
       where: {
         id: req.params.id
@@ -30,7 +30,7 @@ module.exports = function(app) {
   });
 
    // Get route for retrieving a product category
-   app.get('/api/product/department_name/:id', function(req, res) {
+   app.get('/api/products/department_name/:id', function(req, res) {
     db.product.department_name.findAll({
       where: {
         id: req.params.id
@@ -43,7 +43,7 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new product
-  app.post('/api/product', function(req, res) {
+  app.post('/api/products', function(req, res) {
     db.product.create(req.body).then(function(dbproduct) {
       res.json(dbproduct);
     }).catch(function(error) {
@@ -52,7 +52,7 @@ module.exports = function(app) {
   });
 
   // PUT route for updating products
-  app.put('/api/product/:id', function(req, res) {
+  app.put('/api/products/:id', function(req, res) {
     db.product.update(
       req.body,
       {
@@ -67,7 +67,7 @@ module.exports = function(app) {
   });
 
   // DELETE route for deleting products
-  app.delete('/api/product/:id', function(req, res) {
+  app.delete('/api/products/:id', function(req, res) {
     db.product.destroy({
       where: {
         id: req.params.id

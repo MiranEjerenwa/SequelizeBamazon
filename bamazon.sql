@@ -16,17 +16,17 @@ USE bamazon_db;
 -- );
 
 
-CREATE TABLE product (
-    item_id INTEGER AUTO_INCREMENT NOT NULL,
+CREATE TABLE products (
+    id INTEGER AUTO_INCREMENT NOT NULL,
     product_name VARCHAR(100) NOT NULL,
     department_name VARCHAR(30) NOT NULL,
     price DECIMAL (10,2) NOT NULL,
     stock_quantity INTEGER,
-    PRIMARY KEY (item_id)
+    PRIMARY KEY (id)
 );
 
 -- Populate this database with around 10 different products. (i.e. Insert "mock" data rows into this database and table).
-INSERT INTO product(item_id, product_name, department_name, price, stock_quantity) 
+INSERT INTO products(item_id, product_name, department_name, price, stock_quantity) 
   VALUES (item_id,'Camera','Electronics', 99.50, 10),
 		 (item_id,'Dell - 19" Laptop', 'Electronics', 799.00, 50),
 		 (item_id,'Radar Detector', 'Electronics', 159.99, 10),

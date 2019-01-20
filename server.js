@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, './public')));
-app.use('/', htmlRoutes);
+
 // Routes
 // =============================================================
 require('./routes/api-routes.js')(app);
