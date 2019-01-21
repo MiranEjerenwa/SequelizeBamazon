@@ -8,6 +8,14 @@ const db = require('../models');
 module.exports = function(app) {
 
   // GET route for getting all of the products
+  app.get('/', function(req, res) {
+    db.product.findAll({}).then(function(dbproduct) {
+      res.json(dbproduct);
+    }).catch(function(error) {
+      res.json({ error: error });
+    });
+  });
+
   app.get('/api/products', function(req, res) {
     db.product.findAll({}).then(function(dbproduct) {
       res.json(dbproduct);
