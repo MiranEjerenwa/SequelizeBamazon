@@ -8,7 +8,7 @@ const path = require('path');
 // =============================================================
 const app = express();
 // Defines a PORT for the server to listen for requests
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 // Import Database Models for syncing
 // =============================================================
 const db = require('./models');

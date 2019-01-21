@@ -4,6 +4,11 @@ CREATE DATABASE bamazon_db;
 
 USE bamazon_db;
 
+
+-- create JAWSDB tables
+
+USE fxwwd2dwp17h5ksa;
+
 -- Create a Table inside of that database called products
 -- Here have to manaually enter item ID in tables
 -- CREATE TABLE products (
@@ -15,13 +20,13 @@ USE bamazon_db;
 --     PRIMARY KEY (item_id)
 -- );
 
-
 CREATE TABLE products (
     id INTEGER AUTO_INCREMENT NOT NULL,
     product_name VARCHAR(100) NOT NULL,
     department_name VARCHAR(30) NOT NULL,
     price DECIMAL (10,2) NOT NULL,
     stock_quantity INTEGER,
+	createdAt TIMESTAMP NOT NULL,
     PRIMARY KEY (id)
 );
 
