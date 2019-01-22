@@ -55,7 +55,7 @@ clearInput();
 // render();
 // OR
 const getItems = function(){
-  $.get('/api/products').then(renderItems);
+  $.get('/api/products').then( result => renderItems(result));
 }
 getItems();
 
