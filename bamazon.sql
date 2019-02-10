@@ -27,6 +27,7 @@ CREATE TABLE products (
     price DECIMAL (10,2) NOT NULL,
     stock_quantity INTEGER,
 	createdAt TIMESTAMP NOT NULL,
+	updatedAt TIMESTAMP NOT NULL,
     PRIMARY KEY (id)
 );
 
