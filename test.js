@@ -31,7 +31,7 @@ describe('GET /api/examples', function() {
           let responseStatus = res.status;
           let responseBody = res.body;
           console.log("in products text")
-          // Run assertions on the response
+          // Run assertions on the response/test expectations
   
           expect(err).to.be.null;
   
@@ -42,13 +42,12 @@ describe('GET /api/examples', function() {
             .to.be.an('array')
             .that.has.lengthOf(3);
   
-          // expect(responseBody[0])
-          //   .to.be.an('object')
-          //   .that.includes({ product_name: 'Sprite', department_name: 'Sugars', price: 4.99, stock_quantity: 22 });
+          expect(responseBody[0].product_name).to.equal('Sprite');
   
-        //   expect(responseBody[1])
-        //     .to.be.an('object')
-        //     .that.includes({product_name: 'Coke', department_name: 'Sugars', price: 3.99, stock_quantity: 10});
+          expect(responseBody[2].product_name).to.equal('Lemon');
+          
+          expect(responseBody[1])
+            .to.be.an('object');
   
         //   expect(responseBody[2])
         //   .to.be.an('object')
@@ -64,3 +63,4 @@ describe('GET /api/examples', function() {
       });
     });
   });
+  
